@@ -4,3 +4,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    volumes:
+      - ./src:/root/workspace/src
+    command: ["sleep", "infinity"]

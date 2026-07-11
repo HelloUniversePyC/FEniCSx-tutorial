@@ -10,4 +10,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN pip3 install --no-cache-dir \
     matplotlib \
     scipy
-CMD ["/bin/bash"]
+    
+# Correct command for idle container
+CMD ["sleep", "infinity"] 
