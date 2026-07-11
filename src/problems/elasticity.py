@@ -33,11 +33,11 @@ def sigma(u) -> ufl.core.expr.Expr:
 
 def left_boundary(x) -> np.bool:
     """Function to determine if we are at left edge of mesch."""
-    return np.isclose(x[0], 0.0)
+    return np.isclose(x[0], 0.0, atol=0.05)
 
 def right_boundary(x):
      """Function to determine if we are at right edge of mesch."""
-     return np.isclose(x[0], Lx)
+     return np.isclose(x[0], Lx, atol=0.05)
 
 fdim = domain.topology.dim-1
 right_facets = mesh.locate_entities_boundary(domain, fdim, right_boundary)
