@@ -1,0 +1,6 @@
+services:
+  fenicsxtutorial:
+    image: fenicsxtutorial
+    build:
+      context: .
+      dockerfile: ./Dockerfile
